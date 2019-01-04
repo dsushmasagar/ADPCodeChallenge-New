@@ -1,0 +1,80 @@
+
+ <div class="container currentWeatherComponent">
+  <div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">{{currentWeatherReport?.name}}</h5>
+              <p class="card-text">{{currentWeatherReport?.weather[0]?.main}}</p>
+              <p class="card-text">{{currentWeatherReport?.weather[0]?.description}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h6>Temperature<i class="wi wi-sunrise"></i></h6>
+                    </div>
+                    <div class="col-sm-6">
+                      <span>{{currentWeatherReport?.main.temp}}</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h6>Pressure<i class="wi wi-barometer"></i></h6>
+                    </div>
+                    <div class="col-sm-6">
+                      <span>{{currentWeatherReport?.main.pressure}}</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h6>Humidity<i class="wi wi-humidity"></i></h6>
+                    </div>
+                    <div class="col-sm-6">
+                      <span>{{currentWeatherReport?.main.humidity}}</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h6>Temperature Min<i class="wi wi-sunset"></i></h6>
+                    </div>
+                    <div class="col-sm-6">
+                      <span>{{currentWeatherReport?.main.temp_min}}</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h6>Temperature Max<i class="wi wi-sunrise"></i></h6>
+                    </div>
+                    <div class="col-sm-6">
+                      <span>{{currentWeatherReport?.main.temp_max}}</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="card-body">
+              <a routerLink="/forecast" routerLinkActive="active" class="nav-link" href="#">5 Day Weather Forecast <span class="sr-only">(current)</span></a>
+            </div>
+          </div>
+    </div>
+  </div>
+</div> 
