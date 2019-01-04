@@ -62,7 +62,6 @@ export class FormComponent implements OnInit {
       phone: '',
       notification: 'email',
       rating: [null, ratingRange(1, 5)],
-      sendCatalog: true,
       addresses: this.fb.array([this.buildAddress()])
     });
 
@@ -78,33 +77,21 @@ export class FormComponent implements OnInit {
     );
   }
 
-  addAddress(): void {
-    this.addresses.push(this.buildAddress());
-  }
-
   buildAddress(): FormGroup {
     return this.fb.group({
-      addressType: 'home',
       street1: ['', Validators.required],
-      street2: '',
-      city: '',
-      state: '',
       zip: ''
     });
   }
 
   populateTestData(): void {
     this.reactForm.patchValue({
-      firstName: 'Jack',
-      lastName: 'Harkness',
-      emailGroup: { email: 'jack@torchwood.com', confirmEmail: 'jack@torchwood.com' }
+      firstName: 'Sushma',
+      lastName: 'Deshetti',
+      emailGroup: { email: 'dsushma.sagar@gmail.com', confirmEmail: 'dsushma.sagar@gmail.com' }
     });
     const addressGroup = this.fb.group({
-      addressType: 'work',
-      street1: 'Mermaid Quay',
-      street2: '',
-      city: 'Cardiff Bay',
-      state: 'CA',
+      street1: 'Edgemooretrace',
       zip: ''
     });
     this.reactForm.setControl('addresses', this.fb.array([addressGroup]));

@@ -7,7 +7,7 @@ import { WeatherService } from '../shared/weather.service';
   styleUrls: ['./five-day-weather.component.scss']
 })
 export class FiveDayWeatherComponent implements OnInit {
-
+  humidity: number;
   title:string = "5 day / 3 hour forecast";
   fiveDayreport:{};
   
@@ -15,6 +15,7 @@ export class FiveDayWeatherComponent implements OnInit {
   
   ngOnInit() {
     this.getFiveDayForecast(this.weatherService.zipCode);
+    
     this.weatherService.zipCodeChanges$.subscribe(
       changedZipCode => {
         this.getFiveDayForecast(changedZipCode);

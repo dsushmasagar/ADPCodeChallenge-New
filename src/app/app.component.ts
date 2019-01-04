@@ -14,11 +14,12 @@ export class AppComponent {
   fiveDayreport:{};  
   ngOnInit() {
     this.zipCode = this.weatherService.zipCode;
-    this.weatherService.zipCodeChanges$.subscribe(
-      changedZipCode => {
-        this.zipCode = changedZipCode;
-      }
-    );
+
+    // this.weatherService.zipCodeChanges$.subscribe(
+    //   changedZipCode => {
+    //     this.zipCode = changedZipCode;
+    //   }
+    // );
   }
 
   updateZip($event) {

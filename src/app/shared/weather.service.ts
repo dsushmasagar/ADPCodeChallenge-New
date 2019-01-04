@@ -29,7 +29,7 @@ export class WeatherService {
     );
   }
 
-  getSevenDayForecast(zipCode): Observable<{}> {
+  getTodayWeatherForecast(zipCode): Observable<{}> {
     return this.http.get<{}>(`https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},us&${this.appid}`)
     .pipe(
       tap(data => console.log('data', data)),
@@ -41,7 +41,7 @@ export class WeatherService {
     return (error: any): Observable<T> => {
  
       // TODO: send the error to remote logging infrastructure
-      console.error(error, "ram maradolla"); // log to console instead
+      console.error(error); // log to console instead
  
       // Let the app keep running by returning an empty result.
       return of(result as T);

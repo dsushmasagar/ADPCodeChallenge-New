@@ -1,13 +1,13 @@
 
- <div class="container currentWeatherComponent">
+ <div class="container todayWeatherComponent">
   <div class="row">
     <div class="col-sm-12">
         <div class="card">
             <div class="card-img-top">
             <div class="card-body">
-              <h5 class="card-title">{{currentWeatherReport?.name}}</h5>
-              <p class="card-text">{{currentWeatherReport?.weather[0]?.main}}</p>
-              <p class="card-text">{{currentWeatherReport?.weather[0]?.description}}</p>
+              <h5 class="card-title">{{todayWeatherReport?.name}}</h5>
+              <p class="card-text">{{todayWeatherReport?.weather[0]?.main}}</p>
+              <p class="card-text">{{todayWeatherReport?.weather[0]?.description}}</p>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
@@ -17,7 +17,7 @@
                       <h6>Temperature<i class="wi wi-sunrise"></i></h6>
                     </div>
                     <div class="col-sm-6">
-                      <span>{{currentWeatherReport?.main.temp}}</span>
+                      <span>{{todayWeatherReport?.main.temp}}</span>
                     </div>
                   </div>
                 </div>
@@ -29,7 +29,7 @@
                       <h6>Pressure<i class="wi wi-barometer"></i></h6>
                     </div>
                     <div class="col-sm-6">
-                      <span>{{currentWeatherReport?.main.pressure}}</span>
+                      <span>{{todayWeatherReport?.main.pressure}}</span>
                     </div>
                   </div>
                 </div>
@@ -41,7 +41,7 @@
                       <h6>Humidity<i class="wi wi-humidity"></i></h6>
                     </div>
                     <div class="col-sm-6">
-                      <span>{{currentWeatherReport?.main.humidity}}</span>
+                      <span>{{todayWeatherReport?.main.humidity}}</span>
                     </div>
                   </div>
                 </div>
@@ -53,7 +53,7 @@
                       <h6>Temperature Min<i class="wi wi-sunset"></i></h6>
                     </div>
                     <div class="col-sm-6">
-                      <span>{{currentWeatherReport?.main.temp_min}}</span>
+                      <span>{{todayWeatherReport?.main.temp_min}}</span>
                     </div>
                   </div>
                 </div>
@@ -65,14 +65,14 @@
                       <h6>Temperature Max<i class="wi wi-sunrise"></i></h6>
                     </div>
                     <div class="col-sm-6">
-                      <span>{{currentWeatherReport?.main.temp_max}}</span>
+                      <span>{{todayWeatherReport?.main.temp_max}}</span>
                     </div>
                   </div>
                 </div>
               </li>
             </ul>
             <div class="card-body">
-              <a routerLink="/forecast" routerLinkActive="active" class="nav-link" href="#">5 Day Weather Forecast <span class="sr-only">(current)</span></a>
+              <a routerLink="/forecast" routerLinkActive="active" class="nav-link" href="#">5 Day Weather Forecast <span class="sr-only">(today)</span></a>
             </div>
           </div>
     </div>

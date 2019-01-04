@@ -4,21 +4,23 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CurrentWeatherComponent } from './current-weather/current-weather.component';
 import { FiveDayWeatherComponent } from './five-day-weather/five-day-weather.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ConvertTimePipe } from './shared/convert-time.pipe';
 import { FormComponent } from './form/form.component';
+import { HumidityFilterPipe } from './shared/humidity-filter.pipe';
+import { TodayWeatherComponent } from './today-weather/today-weather.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CurrentWeatherComponent,
+    TodayWeatherComponent,
     FiveDayWeatherComponent,
-    LandingPageComponent,
+    HomeComponent,
     ConvertTimePipe,
-    FormComponent
+    FormComponent,
+    HumidityFilterPipe
   ],
   imports: [
     BrowserModule,
